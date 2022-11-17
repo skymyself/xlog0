@@ -15,11 +15,12 @@
 
   : > /var/log/xray/access.log
   : > /var/log/xray/error.log
-
+  
   systemctl restart xray
   sleep 1
   xray api statsquery --server=127.0.0.1:10085
-  
+  echo "###########"
+  echo "流量数据已清空"
 
   echo "###################"
   echo "重置日志完成"
